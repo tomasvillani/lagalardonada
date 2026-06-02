@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ServiceCardProps {
   imagen: string;
@@ -23,9 +24,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   colorFondo = "#fff",
   colorTexto = "#111",
 }) => {
+  const navigate = useNavigate();
   const esFondoOscuro = colorTexto === "#fff";
   const colorSubtexto = esFondoOscuro ? "rgba(255,255,255,0.85)" : "#555";
   const colorLista = esFondoOscuro ? "rgba(255,255,255,0.9)" : "#444";
+
+  const handleClick = (href: string) => {
+    if (href.startsWith("http")) {
+      window.open(href, "_blank");
+    } else {
+      navigate(href);
+    }
+  };
 
   return (
     <div className="service-card-wrapper">
@@ -71,7 +81,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                         : "service-card-btn-outline"
                       : "service-card-btn-primary"
                   }
-                  onClick={() => window.open(btn.href, "_blank")}
+                  onClick={() => handleClick(btn.href)}
                 >
                   {btn.label}
                 </button>
