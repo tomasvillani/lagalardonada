@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../style/AboutUsPage.css";
 
 const JoinUsSection: React.FC = () => {
@@ -39,9 +40,9 @@ const JoinUsSection: React.FC = () => {
         </div>
 
         <div className="join-us-footer">
-          <a href="/contacto" className="join-btn">
+          <Link to="/contacto" className="join-btn">
             Únete a nuestro equipo <span>→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
