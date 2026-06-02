@@ -560,19 +560,19 @@ button {
 }
 
 .page-wrapper {
-  padding-top: 132px; /* 40px topbar + 92px navbar */
+  padding-top: 132px;
 }
 
 @media (max-width: 1024px) {
-  .page-wrapper { padding-top: 106px; }
+  .page-wrapper { padding-top: 110px; }
 }
 
 @media (max-width: 768px) {
-  .page-wrapper { padding-top: 180px; }
+  .page-wrapper { padding-top: 160px; }
 }
 
 @media (max-width: 480px) {
-  .page-wrapper { padding-top: 200px; }
+  .page-wrapper { padding-top: 220px; }
 }
 
 /* =========================
