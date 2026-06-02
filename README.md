@@ -64,18 +64,6 @@ npm run dev
 npm run build
 ```
 
-## Estructura del proyecto
-
-```text
-src/
-├── components/
-├── style/
-├── assets/
-├── App.tsx
-├── main.tsx
-└── ...
-```
-
 ## Objetivos del proyecto
 
 - Desarrollar una aplicación React estructurada y mantenible.
