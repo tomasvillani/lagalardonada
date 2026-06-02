@@ -64,12 +64,6 @@ Iniciar el entorno de desarrollo:
 npm run dev
 ```
 
-## Build de producción
-
-```bash
-npm run build
-```
-
 ## Objetivos del proyecto
 
 - Desarrollar una aplicación React estructurada y mantenible.
