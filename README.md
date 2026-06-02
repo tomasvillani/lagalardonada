@@ -15,6 +15,12 @@ Este proyecto consiste en la implementación de una web corporativa moderna, res
 
 El objetivo ha sido replicar la estructura, diseño y experiencia de usuario de la web original utilizando tecnologías modernas del ecosistema React.
 
+## Demo
+
+🌐 Proyecto desplegado:
+
+**https://lagalardonada.vercel.app/**
+
 ## Tecnologías utilizadas
 
 - React
