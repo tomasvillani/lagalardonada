@@ -1,4 +1,5 @@
 import React from "react";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const plans = [
   {
@@ -126,12 +127,7 @@ const PreciosSofas: React.FC = () => {
               ))}
             </ul>
 
-            <button
-              className="pricing-btn"
-              onClick={() => window.open("/", "_blank")}
-            >
-              Solicitar servicio
-            </button>
+            <SolicitarCitaButton texto="Solicitar servicio"/>
 
           </div>
         ))}

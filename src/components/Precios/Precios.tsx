@@ -1,7 +1,7 @@
 import TopBar from "../TopBar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Formulario from "./Formulario";
+import Formulario from "../Formulario";
 import PreciosSofas from "./PreciosSofas";
 import "../../style/Precios.css";
 import PreciosCortinas from "./PreciosCortinas";
@@ -9,6 +9,8 @@ import PreciosAlfombras from "./PreciosAlfombras";
 import PreciosEdredones from "./PreciosEdredones";
 import PreciosRestAlfombras from "./PreciosRestAlfombras";
 import ContactFaq from "./ContactFaq";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const RestAlfombras = () => {
   return (
@@ -27,16 +29,12 @@ const RestAlfombras = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/precios/#formulario_de_presupuesto_pag_servicio" className="btn-outline">
-              Consigue tu presupuesto
-            </a>
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
+            <SolicitarCitaButton texto="Consigue tu presupuesto"/>
+            <ContactButton />
           </div>
         </div>
       </section>
-      <Formulario />
+      <Formulario imagen="/precios-1.jpg" altImagen="Precios"/>
       <PreciosSofas />
       <PreciosCortinas />
       <PreciosAlfombras />

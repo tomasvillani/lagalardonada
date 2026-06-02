@@ -1,4 +1,5 @@
 import { FaSuitcase, FaPaintBrush, FaMedal } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const sections = [
   {
@@ -56,9 +57,9 @@ const InfoServices = () => {
 
       </div>
       <div className="info-button-wrapper">
-        <a href="/contacto" className="btn-primary">
+        <Link to="/servicios" className="btn-primary">
           Más información
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -6,6 +6,8 @@ import CortinasCleaningMadridSection from "./CortinasCleaningMadridSection";
 import CortinasCleaningInfoSection from "./CortinasCleaningInfoSection";
 import CortinasInfo from "./CortinasInfo";
 import CortinasBenefitsGrid from "./CortinasBenefitsGrid";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const Cortinas = () => {
   return (
@@ -26,12 +28,8 @@ const Cortinas = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
-            <a href="/servicios" className="btn-outline">
-              Resérvalo online
-            </a>
+            <ContactButton />
+            <SolicitarCitaButton texto="Resérvalo online"/>
           </div>
         </div>
       </section>

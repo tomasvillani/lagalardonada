@@ -6,6 +6,8 @@ import RestAlfombrasCleaningMadridSection from "./RestAlfombrasCleaningMadridSec
 import RestAlfombrasCleaningInfoSection from "./RestAlfombrasCleaningInfoSection";
 import RestAlfombrasInfo from "./RestAlfombrasInfo";
 import RestAlfombrasBenefitsGrid from "./RestAlfombrasBenefitsGrid";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const RestAlfombras = () => {
   return (
@@ -23,12 +25,8 @@ const RestAlfombras = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
-            <a href="/servicios" className="btn-outline">
-              Resérvalo online
-            </a>
+            <ContactButton />
+            <SolicitarCitaButton texto="Resérvalo online"/>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/AboutUsPage.css";
+import "../../style/AboutUsPage.css";
 
 const OurHistory: React.FC = () => {
   return (

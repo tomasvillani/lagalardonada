@@ -6,6 +6,8 @@ import EdredonesCleaningMadridSection from "./EdredonesCleaningMadridSection";
 import EdredonesCleaningInfoSection from "./EdredonesCleaningInfoSection";
 import EdredonesInfo from "./EdredonesInfo";
 import EdredonesBenefitsGrid from "./EdredonesBenefitsGrid";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const Edredones = () => {
   return (
@@ -23,12 +25,8 @@ const Edredones = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
-            <a href="/servicios" className="btn-outline">
-              Resérvalo online
-            </a>
+            <ContactButton />
+            <SolicitarCitaButton texto="Resérvalo online"/>
           </div>
         </div>
       </section>

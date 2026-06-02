@@ -5,7 +5,7 @@ const EdredonesInfo: React.FC = () => {
     <section className="our-dedication">
 
       <div className="our-dedication-image">
-        <img src="/edredones-2.jpeg" alt="Limpieza de Edredones" />
+        <img src="/edredones/edredones-2.jpeg" alt="Limpieza de Edredones" />
       </div>
 
       <div className="our-dedication-content">

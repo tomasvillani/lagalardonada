@@ -1,4 +1,5 @@
 import React from "react";
+import ContactButton from "../ContactButton";
 
 const CortinasCleaningMadridSection: React.FC = () => {
   return (
@@ -20,9 +21,7 @@ const CortinasCleaningMadridSection: React.FC = () => {
         </div>
 
         <div className="action">
-          <a href="/contacto" className="btn">
-            Contactar
-          </a>
+          <ContactButton />
         </div>
       </div>
 

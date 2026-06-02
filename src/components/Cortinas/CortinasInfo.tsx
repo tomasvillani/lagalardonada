@@ -5,7 +5,7 @@ const CortinasInfo: React.FC = () => {
     <section className="our-dedication">
 
       <div className="our-dedication-image">
-        <img src="/cortinas-2.jpg" alt="Limpieza de Cortinas" />
+        <img src="/cortinas/cortinas-2.jpg" alt="Limpieza de Cortinas" />
       </div>
 
       <div className="our-dedication-content">

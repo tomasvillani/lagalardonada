@@ -1,4 +1,5 @@
 import React from "react";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const AlfombrasCleaningInfoSection: React.FC = () => {
   return (
@@ -42,9 +43,7 @@ const AlfombrasCleaningInfoSection: React.FC = () => {
           </ul>
 
           <div className="info-action">
-            <a href="/contacto" className="info-btn">
-              Solicitar servicio
-            </a>
+            <SolicitarCitaButton texto="Solicitar servicio"/>
           </div>
 
         </div>

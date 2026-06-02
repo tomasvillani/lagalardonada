@@ -6,6 +6,8 @@ import SofasInfo from "./SofasInfo";
 import SofaBenefitsGrid from "./SofaBenefitsGrid";
 import ContactInfo from "../ContactInfo";
 import SofaCleaningInfoSection from "./SofaCleaningInfoSection";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from "../SolicitarCitaButton";
 
 const Sofas = () => {
   return (
@@ -23,12 +25,8 @@ const Sofas = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
-            <a href="/servicios" className="btn-outline">
-              Resérvalo online
-            </a>
+            <ContactButton />
+            <SolicitarCitaButton texto="Resérvalo online"/>
           </div>
         </div>
       </section>

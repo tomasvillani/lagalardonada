@@ -1,12 +1,13 @@
 import React from "react";
-import "../style/AboutUsPage.css";
+import "../../style/AboutUsPage.css";
+import OurServicesButton from "../OurServicesButton";
 
 const OurDedication: React.FC = () => {
   return (
     <section className="our-dedication">
       <div className="our-dedication-image">
         <img
-          src="/sobre-nosotros-2.jpeg"
+          src="/sobre-nosotros/sobre-nosotros-2.jpeg"
           alt="Nuestra dedicación"
         />
       </div>
@@ -33,9 +34,7 @@ const OurDedication: React.FC = () => {
           <li>Desinfección completa</li>
         </ul>
 
-        <a href="/servicios" className="dedication-btn">
-          Nuestros servicios <span>→</span>
-        </a>
+        <OurServicesButton />
       </div>
     </section>
   );

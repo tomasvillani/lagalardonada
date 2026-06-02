@@ -90,15 +90,15 @@ const Navbar = () => {
         </li>
 
         <li><Link to="/precios-limpieza-madrid">Precios</Link></li>
-        <li><a href="/promociones">Promociones</a></li>
-        <li><a href="/galeria">Galería</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><Link to="/promociones">Promociones</Link></li>
+        <li><Link to="/galeria-de-trabajos-realizados">Galería</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/contacto">Contacto</Link></li>
 
         <li>
-          <a href="/solicitar-servicio" className="service-btn">
+          <Link to="/solicita-tu-cita" className="service-btn">
             Solicita tu servicio
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

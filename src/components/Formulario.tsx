@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-const Formulario: React.FC = () => {
+interface FormularioProps {
+  imagen: string;
+  altImagen?: string;
+}
+
+const Formulario: React.FC<FormularioProps> = ({ imagen, altImagen = "Formulario" }) => {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -26,13 +31,13 @@ const Formulario: React.FC = () => {
 
         {/* IZQUIERDA — Imagen */}
         <div className="budget-image">
-          <img src="/precios-1.jpg" alt="Consigue tu presupuesto" />
+          <img src={imagen} alt={altImagen} />
         </div>
 
         {/* DERECHA — Formulario */}
         <div className="budget-form-wrapper">
-          <h2>Consigue tu presupuesto</h2>
-          <p>Rellena el siguiente formulario y te contactaremos en menos de 24h.</p>
+          <h2>Consigue tu oferta personalizada</h2>
+          <p>Rellena el siguiente formulario y te contactaremos con tu oferta en menos de 24h.</p>
 
           <form className="budget-form" onSubmit={handleSubmit}>
 

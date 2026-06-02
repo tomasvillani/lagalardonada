@@ -5,11 +5,11 @@ const ColchonesInfo: React.FC = () => {
     <section className="our-dedication">
 
       <div className="our-dedication-image">
-        <img src="/colchones-2.jpeg" alt="Limpieza de Colchones" />
+        <img src="/colchones/colchones-2.jpeg" alt="Limpieza de Colchones" />
       </div>
 
       <div className="our-dedication-content">
-        <h2>Tres Motivos Para Elegir Nuestros Servicio</h2>
+        <h2>Tres Motivos Para Elegir Nuestros Servicios</h2>
 
         <p>
           <strong>1. Profesionalismo:</strong> Contamos con un equipo altamente capacitado y equipado con las últimas tecnologías en limpieza de colchones. Garantizamos resultados impecables.

@@ -6,13 +6,15 @@ import ColchonesCleaningInfoSection from "./ColchonesCleaningInfoSection";
 import ColchonesCleaningMadridSection from "./ColchonesCleaningMadridSection";
 import ColchonesInfo from "./ColchonesInfo";
 import ColchonesBenefitsGrid from "./ColchonesBenefitsGrid";
+import ContactButton from "../ContactButton";
+import SolicitarCitaButton from "../SolicitarCitaButton";
 
 const Colchones = () => {
   return (
     <div>
       <TopBar />
       <Navbar />
-      <section className="hero colchones">
+      <section className="hero our-services">
         <div className="hero-content">
           <h1>
             Limpieza de Colchones
@@ -23,12 +25,8 @@ const Colchones = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="/contacto" className="btn-outline">
-              Contactar
-            </a>
-            <a href="/servicios" className="btn-outline">
-              Resérvalo online
-            </a>
+            <ContactButton />
+            <SolicitarCitaButton texto="Resérvalo online"/>
           </div>
         </div>
       </section>

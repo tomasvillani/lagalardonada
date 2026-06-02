@@ -1,4 +1,5 @@
 import React from "react";
+import SolicitarCitaButton from '../SolicitarCitaButton'
 
 const plans = [
   {
@@ -197,12 +198,7 @@ const PreciosAlfombras: React.FC = () => {
               ))}
             </ul>
 
-            <button
-              className="pricing-btn"
-              onClick={() => window.open("https://lagalardonada.es/solicita-tu-cita/", "_blank")}
-            >
-              Solicitar servicio
-            </button>
+            <SolicitarCitaButton texto="Solicitar servicio"/>
 
           </div>
         ))}

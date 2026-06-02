@@ -1,3 +1,6 @@
+import ContactButton from "./ContactButton";
+import OurServicesButton from "./OurServicesButton";
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -18,8 +21,8 @@ const Hero = () => {
         </p>
 
         <div className="hero-buttons">
-          <a href="/contacto" className="btn-primary">Contactar</a>
-          <a href="/servicios" className="btn-secondary">Nuestros servicios</a>
+          <ContactButton />
+          <OurServicesButton/>
         </div>
 
       </div>
