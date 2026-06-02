@@ -13,7 +13,7 @@ import OurServicesButton from "../OurServicesButton";
 
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className="page-wrapper">
       <TopBar />
       <Navbar />
       <section className="about-hero">

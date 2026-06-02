@@ -11,7 +11,7 @@ import SolicitarCitaButton from "../SolicitarCitaButton";
 
 const Sofas = () => {
   return (
-    <div>
+    <div className="page-wrapper">
       <TopBar />
       <Navbar />
       <section className="hero sofas">
