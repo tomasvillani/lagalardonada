@@ -38,7 +38,7 @@ import SolicitaCita from './components/SolicitaCita.tsx'
 
 function HomePage() {
   return (
-    <>
+    <div className="page-wrapper">
       <TopBar />
       <Navbar />
       <Hero />
@@ -49,7 +49,7 @@ function HomePage() {
       <DifCompetencia />
       <ContactCTA />
       <Footer />
-    </>
+    </div>
   );
 }
 

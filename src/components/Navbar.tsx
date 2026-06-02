@@ -30,6 +30,32 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [topbarHeight]);
 
+  // Actualizar padding-top de todos los .page-wrapper dinámicamente
+  useEffect(() => {
+    const updatePageWrapper = () => {
+      const topbar = document.querySelector(".topbar") as HTMLElement;
+      const navbar = document.querySelector(".navbar") as HTMLElement;
+      const total = (topbar?.offsetHeight ?? 0) + (navbar?.offsetHeight ?? 0);
+      document.querySelectorAll(".page-wrapper").forEach((el) => {
+        (el as HTMLElement).style.paddingTop = `${total}px`;
+      });
+    };
+
+    updatePageWrapper();
+    window.addEventListener("resize", updatePageWrapper);
+
+    const observer = new ResizeObserver(updatePageWrapper);
+    const topbar = document.querySelector(".topbar");
+    const navbar = document.querySelector(".navbar");
+    if (topbar) observer.observe(topbar);
+    if (navbar) observer.observe(navbar);
+
+    return () => {
+      window.removeEventListener("resize", updatePageWrapper);
+      observer.disconnect();
+    };
+  }, []);
+
   // Click fuera cierra dropdown
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {

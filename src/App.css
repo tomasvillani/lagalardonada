@@ -152,6 +152,14 @@ button {
 }
 
 /* =========================
+   PAGE WRAPPER
+========================= */
+
+.page-wrapper {
+  padding-top: 132px;
+}
+
+/* =========================
    HERO
 ========================= */
 
@@ -208,16 +216,16 @@ button {
 }
 
 /* Hero variants */
-.hero.sofas      { background-image: url("/sofas/sofas-1.jpeg"); }
-.hero.colchones  { background-image: url("/colchones/colchones-1.jpg"); }
-.hero.alfombras  { background-image: url("/limpieza-alfombras.jpeg"); }
-.hero.edredones  { background-image: url("/edredones/edredones-1.jpeg"); }
+.hero.sofas        { background-image: url("/sofas/sofas-1.jpeg"); }
+.hero.colchones    { background-image: url("/colchones/colchones-1.jpg"); }
+.hero.alfombras    { background-image: url("/limpieza-alfombras.jpeg"); }
+.hero.edredones    { background-image: url("/edredones/edredones-1.jpeg"); }
 .hero.restalfombras { background-image: url("/restauracion-alfombras.jpeg"); }
-.hero.cortinas   { background-image: url("/cortinas/cortinas-1.jpeg"); }
-.hero.precios    { background-image: url("/hero-precios.jpg"); }
-.hero.promociones { background-image: url("/promociones.jpeg"); }
-.hero.contact     { background-image: url("/contact.jpg"); }
-.hero.our-services  { background-image: url("/our-services.jpg"); }
+.hero.cortinas     { background-image: url("/cortinas/cortinas-1.jpeg"); }
+.hero.precios      { background-image: url("/hero-precios.jpg"); }
+.hero.promociones  { background-image: url("/promociones.jpeg"); }
+.hero.contact      { background-image: url("/contact.jpg"); }
+.hero.our-services { background-image: url("/our-services.jpg"); }
 
 .page-content {
   padding-top: 0;
@@ -233,7 +241,6 @@ button {
   padding: 6rem 4rem;
 }
 
-/* FILA 1 */
 .top {
   display: flex;
   justify-content: space-between;
@@ -260,7 +267,6 @@ button {
 
 .action { flex-shrink: 0; }
 
-/* FILA 2 — Cards */
 .bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -297,7 +303,7 @@ button {
 }
 
 /* =========================
-   INFO (fondo blanco)
+   INFO
 ========================= */
 
 .info {
@@ -314,7 +320,6 @@ button {
   align-items: start;
 }
 
-/* Izquierda */
 .info-left h2 {
   font-size: clamp(1.5rem, 2.8vw, 2.3rem);
   font-weight: 800;
@@ -336,7 +341,6 @@ button {
   margin-bottom: 1rem;
 }
 
-/* Derecha — Panel precio */
 .info-right {
   background: #f9fafb;
   padding: 2rem;
@@ -409,7 +413,7 @@ button {
 
 .info-contact-strip {
   background: #0d6efd;
-  padding: 4rem 4rem;
+  padding: 4rem;
 }
 
 .info-contact-container {
@@ -559,28 +563,13 @@ button {
   line-height: 1.65;
 }
 
-.page-wrapper {
-  padding-top: 132px;
-}
+/* =========================
+   RESPONSIVE — Desktop grande
+========================= */
 
 @media (max-width: 1024px) {
   .page-wrapper { padding-top: 110px; }
-}
 
-@media (max-width: 768px) {
-  .page-wrapper { padding-top: 160px; }
-}
-
-@media (max-width: 480px) {
-  .page-wrapper { padding-top: 220px; }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Tablet grande */
-@media (max-width: 1024px) {
   .hero {
     padding: 6rem 3rem;
     min-height: 75vh;
@@ -602,67 +591,80 @@ button {
   }
 
   .bottom { grid-template-columns: repeat(2, 1fr); }
-
   .info-container { grid-template-columns: 1fr; }
-
   .info-right { position: static; }
-
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .our-dedication {
-    grid-template-columns: 1fr;
-  }
-
-  .our-dedication-image {
-    height: 350px;
-  }
-
-  .our-dedication-content {
-    padding: 3rem 2.5rem;
-  }
+  .our-dedication { grid-template-columns: 1fr; }
+  .our-dedication-image { height: 350px; }
+  .our-dedication-content { padding: 3rem 2.5rem; }
 }
 
-/* Tablet */
+/* =========================
+   RESPONSIVE — Tablet
+========================= */
+
 @media (max-width: 768px) {
   html { font-size: 95%; }
 
+  .page-wrapper { padding-top: 160px; }
+
   .hero {
-    padding: 5rem 2rem;
-    min-height: 70vh;
-    align-items: flex-end;
-    padding-bottom: 4rem;
+    padding: 4rem 2rem 3rem;
+    min-height: 60vh;
+    align-items: flex-start;
   }
 
   .hero::before {
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.6) 0%,
       rgba(255, 255, 255, 0.92) 50%,
       rgba(255, 255, 255, 1) 100%
     );
   }
 
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
   .hero-buttons {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.7rem;
   }
 
-  .info-contact-container {
-    grid-template-columns: 1fr;
-  }
-
-  .info-contact-item {
-    border-radius: 16px;
-  }
+  .info-contact-container { grid-template-columns: 1fr; }
+  .info-contact-item { border-radius: 16px; }
 }
 
-/* Móvil */
+/* =========================
+   RESPONSIVE — Móvil
+========================= */
+
 @media (max-width: 600px) {
   html { font-size: 92%; }
 
+  .page-wrapper { padding-top: 200px; }
+
   .hero {
-    padding: 4rem 1.5rem 3rem;
-    min-height: 65vh;
+    padding: 3rem 1.5rem 2.5rem;
+    min-height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
   }
 
   .section { padding: 4rem 1.5rem; }
@@ -671,12 +673,21 @@ button {
   .info-contact-strip { padding: 3rem 1.5rem; }
 
   .bottom { grid-template-columns: 1fr; }
-
   .benefits-grid { grid-template-columns: 1fr; }
-
   .our-dedication-image { height: 260px; }
-
   .our-dedication-content { padding: 2.5rem 1.5rem; }
-
   .amount { font-size: 2.4rem; }
+}
+
+/* =========================
+   RESPONSIVE — Móvil pequeño
+========================= */
+
+@media (max-width: 480px) {
+  .page-wrapper { padding-top: 220px; }
+
+  .hero {
+    padding: 2.5rem 1.2rem 2rem;
+    min-height: 50vh;
+  }
 }
