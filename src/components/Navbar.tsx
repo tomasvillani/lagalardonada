@@ -5,19 +5,24 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [topbarHeight, setTopbarHeight] = useState(40);
+  const [isMobile, setIsMobile] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
   const navRef = useRef<HTMLElement>(null);
 
-  const isTouchDevice = () => window.matchMedia("(hover: none)").matches;
+  // Detectar móvil por ancho de pantalla
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Medir altura del TopBar dinámicamente
   useEffect(() => {
     const topbar = document.querySelector(".topbar") as HTMLElement;
     if (!topbar) return;
-
     const updateHeight = () => setTopbarHeight(topbar.offsetHeight);
     updateHeight();
-
     const observer = new ResizeObserver(updateHeight);
     observer.observe(topbar);
     return () => observer.disconnect();
@@ -67,9 +72,9 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleMouseEnter = () => { if (!isTouchDevice()) setOpen(true); };
-  const handleMouseLeave = () => { if (!isTouchDevice()) setOpen(false); };
-  const handleButtonClick = () => { if (isTouchDevice()) setOpen((prev) => !prev); };
+  const handleMouseEnter = () => { if (!isMobile) setOpen(true); };
+  const handleMouseLeave = () => { if (!isMobile) setOpen(false); };
+  const handleButtonClick = () => setOpen((prev) => !prev);
 
   const navTop = scrolled ? 0 : topbarHeight;
 
