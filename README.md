@@ -37,13 +37,13 @@ El objetivo ha sido replicar la estructura, diseño y experiencia de usuario de 
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/la-galardonada.git
+git clone https://github.com/tomasvillani/lagalardonada.git
 ```
 
 Entrar en el proyecto:
 
 ```bash
-cd la-galardonada
+cd lagalardonada
 ```
 
 Instalar dependencias:
