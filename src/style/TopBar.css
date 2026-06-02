@@ -1,0 +1,80 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #0d6efd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 4rem;
+  font-size: 0.85rem;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.topbar-left {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  opacity: 0.95;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topbar-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.topbar-right a:hover {
+  background: #fff;
+  color: #0d6efd;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0.4rem 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  .topbar-left {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .topbar-right {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .topbar-right a {
+    width: 26px;
+    height: 26px;
+  }
+}

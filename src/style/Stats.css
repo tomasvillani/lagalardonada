@@ -1,0 +1,115 @@
+.stats {
+  padding: 5rem 5.5rem;
+  background: #0041a1; /* fondo oscuro elegante */
+  font-family: "Inter", system-ui, sans-serif;
+  text-align: center;
+}
+
+/* TITULO */
+.stats h2 {
+  color: #ff7a00;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* LINEA AZUL GRUESA */
+.stats-line {
+  width: 120px;
+  height: 5px;
+  background: #0d6efd;
+  margin: 0 auto 3rem auto;
+  border-radius: 10px;
+}
+
+/* GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* CARD */
+.stats-card {
+  border: none;
+
+  padding: 2rem;
+
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ICONO */
+.icon {
+  font-size: 2.8rem; /* 👈 más grande */
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+/* NÚMERO */
+.stats-card h3 {
+  color: #ff7a00; /* naranja */
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+/* TEXTO */
+.stats-card p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .stats {
+    padding: 4rem 3rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  .stats h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats {
+    padding: 3rem 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .stats-card {
+    padding: 1.6rem;
+  }
+
+  .icon {
+    font-size: 2.2rem;
+  }
+
+  .stats-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .stats-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+}
+

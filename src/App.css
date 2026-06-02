@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================
+   RESET & BASE
+========================= */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #fff;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* =========================
+   TIPOGRAFÍA
+========================= */
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid #0d6efd;
+  background: #fff;
+  color: #0d6efd;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #0a58ca;
+  color: #fff;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #0d6efd;
+  transform: translateY(-2px);
+}
+
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.info-btn:hover {
+  background: #0d6efd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   UTILIDADES
+========================= */
+
+.text-center { text-align: center; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 6rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.80) 40%,
+    rgba(255, 255, 255, 0.30) 65%,
+    rgba(255, 255, 255, 0.00) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  margin-left: 6vw;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: #ffffff;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero variants */
+.hero.sofas      { background-image: url("/sofas-1.jpeg"); }
+.hero.colchones  { background-image: url("/colchones-1.jpg"); }
+.hero.alfombras  { background-image: url("/limpieza-alfombras.jpeg"); }
+.hero.edredones  { background-image: url("/edredones-1.jpeg"); }
+.hero.restalfombras { background-image: url("/restauracion-alfombras.jpeg"); }
+.hero.cortinas   { background-image: url("/cortinas-1.jpeg"); }
+.hero.precios    { background-image: url("/hero-precios.jpg"); }
+
+/* =========================
+   SECTION (fondo azul)
+========================= */
+
+.section {
+  background: #0d6efd;
+  color: #fff;
+  padding: 6rem 4rem;
+}
+
+/* FILA 1 */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+}
+
+.text { flex: 2; }
+
+.text h1 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.95;
+  max-width: 680px;
+}
+
+.action { flex-shrink: 0; }
+
+/* FILA 2 — Cards */
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 1.6rem;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  opacity: 0.93;
+}
+
+/* =========================
+   INFO (fondo blanco)
+========================= */
+
+.info {
+  background: #fff;
+  padding: 6rem 4rem;
+}
+
+.info-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Izquierda */
+.info-left h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  color: #111;
+}
+
+.info-left h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 1.2rem;
+}
+
+.info-left p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Derecha — Panel precio */
+.info-right {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #e8eaf0;
+  position: sticky;
+  top: 2rem;
+}
+
+.price-title {
+  font-size: 0.9rem;
+  color: #6f42c1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.currency {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1;
+}
+
+.unit {
+  font-size: 1rem;
+  color: #666;
+}
+
+.info-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.info-right ul li {
+  font-size: 0.92rem;
+  color: #555;
+  padding: 0.5rem 0.8rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e8eaf0;
+  text-align: center;
+}
+
+.info-action {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   CONTACT STRIP
+========================= */
+
+.info-contact-strip {
+  background: #0d6efd;
+  padding: 4rem 4rem;
+}
+
+.info-contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.info-contact-item {
+  background: #fff;
+  color: #0d6efd;
+  padding: 1.1rem 1.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.info-contact-icon {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   OUR DEDICATION
+========================= */
+
+.our-dedication {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0;
+  min-height: 600px;
+}
+
+.our-dedication-image {
+  overflow: hidden;
+}
+
+.our-dedication-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.our-dedication-image:hover img {
+  transform: scale(1.03);
+}
+
+.our-dedication-content {
+  padding: 5rem 4rem;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.our-dedication-content h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #111;
+}
+
+.our-dedication-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-top: 0.5rem;
+}
+
+.our-dedication-content p {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.our-dedication-content strong {
+  color: #111;
+}
+
+/* =========================
+   BENEFITS GRID
+========================= */
+
+.benefits-section {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+
+.benefits-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: #f9fafb;
+  padding: 1.6rem;
+  border-radius: 16px;
+  border: 1px solid #eef0f5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.benefit-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.check {
+  color: #ff7a00;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.benefit-title h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff7a00;
+  line-height: 1.35;
+}
+
+.benefit-card p {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet grande */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 6rem 3rem;
+    min-height: 75vh;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .section { padding: 5rem 3rem; }
+  .info    { padding: 5rem 3rem; }
+  .benefits-section { padding: 5rem 3rem; }
+  .info-contact-strip { padding: 4rem 3rem; }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom { grid-template-columns: repeat(2, 1fr); }
+
+  .info-container { grid-template-columns: 1fr; }
+
+  .info-right { position: static; }
+
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .our-dedication {
+    grid-template-columns: 1fr;
+  }
+
+  .our-dedication-image {
+    height: 350px;
+  }
+
+  .our-dedication-content {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html { font-size: 95%; }
+
+  .hero {
+    padding: 5rem 2rem;
+    min-height: 70vh;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.92) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-contact-item {
+    border-radius: 16px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  html { font-size: 92%; }
+
+  .hero {
+    padding: 4rem 1.5rem 3rem;
+    min-height: 65vh;
+  }
+
+  .section { padding: 4rem 1.5rem; }
+  .info    { padding: 4rem 1.5rem; }
+  .benefits-section { padding: 4rem 1.5rem; }
+  .info-contact-strip { padding: 3rem 1.5rem; }
+
+  .bottom { grid-template-columns: 1fr; }
+
+  .benefits-grid { grid-template-columns: 1fr; }
+
+  .our-dedication-image { height: 260px; }
+
+  .our-dedication-content { padding: 2.5rem 1.5rem; }
+
+  .amount { font-size: 2.4rem; }
+}

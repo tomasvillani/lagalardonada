@@ -1,0 +1,148 @@
+.info {
+  padding: 5.5rem;
+  background: #fff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* TITULO */
+.info-title {
+  text-align: center;
+  color: #0d6efd;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* CARD */
+.info-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 2rem;
+
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ICONO */
+.info-icon {
+  font-size: 2.6rem;
+  color: #ff7a00;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* TITULO CARD */
+.info-card h3 {
+  text-align: center;
+  color: #0d6efd;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+/* LISTA */
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ITEMS */
+.info-card li {
+  color: #4b5563;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* BULLET */
+.info-card li::before {
+  content: "•";
+  color: #9ca3af;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* BOTÓN */
+.info-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+
+  background: #0d6efd;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: #0b5ed7;
+}
+
+@media (max-width: 900px) {
+  .info {
+    padding: 4rem 2.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .info {
+    padding: 3rem 1.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 1.6rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .info-card li {
+    font-size: 0.92rem;
+  }
+
+  .info-icon {
+    font-size: 2.4rem;
+  }
+}

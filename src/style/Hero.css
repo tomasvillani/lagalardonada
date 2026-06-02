@@ -1,0 +1,202 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  padding: 0 6rem;
+
+  background-image: url("/hero-lagalardonada.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  color: white;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* overlay elegante */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.hero-overlay {
+  max-width: 720px;
+  z-index: 2;
+  position: relative;
+}
+
+/* TÍTULO */
+.hero h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  margin-bottom: 1.2rem;
+
+  background: linear-gradient(90deg, #ffffff, #cfe2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* SUBTÍTULO */
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+/* TEXTO */
+.hero-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  font-weight: 400;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+/* BOTONES */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: #0d6efd;
+  color: white;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: #0b5ed7;
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: white;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 2.5rem;
+    height: 85vh;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 1.5rem;
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* mejora legibilidad móvil */
+  .hero::before {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-overlay {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    align-items: center;
+  }
+}

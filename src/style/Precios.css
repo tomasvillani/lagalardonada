@@ -1,0 +1,444 @@
+/* =========================
+   BUDGET FORM
+========================= */
+
+.budget-section {
+  background: #fff;
+  padding: 6rem 4rem;
+}
+
+.budget-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* IMAGEN */
+.budget-image {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 500px;
+}
+
+.budget-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FORMULARIO */
+.budget-form-wrapper h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.budget-form-wrapper p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #e0e3ea;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #111;
+  background: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+  background: #fff;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.budget-btn {
+  margin-top: 0.5rem;
+  padding: 0.95rem;
+  border-radius: 999px;
+  border: none;
+  background: #ff7a00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.budget-btn:hover {
+  background: #e86e00;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PRICING GRID
+========================= */
+
+.pricing-section {
+  background: #f4f6fb;
+  padding: 6rem 4rem;
+}
+
+.pricing-header {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.pricing-header h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 0.6rem;
+}
+
+.pricing-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pricing-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1.5px solid #e8eaf0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.pricing-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6f42c1;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.pricing-note {
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.pricing-currency {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.pricing-amount {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1;
+}
+
+.pricing-unit {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 0;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.pricing-check {
+  color: #ff7a00;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pricing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.pricing-btn:hover {
+  background: #0d6efd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CONTACT + FAQ
+========================= */
+
+.contact-faq-section {
+  background: #f4f6fb;
+  padding: 6rem 4rem;
+}
+
+.contact-faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* FORMULARIO */
+.contact-form-wrapper h2,
+.faq-wrapper h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.contact-form-wrapper p,
+.faq-wrapper > p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.8rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.95rem;
+  border-radius: 999px;
+  border: none;
+  background: #ff7a00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.contact-submit-btn:hover {
+  background: #e86e00;
+  transform: translateY(-2px);
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  border: 1.5px solid #e8eaf0;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+  background: #f4f6fb;
+}
+
+.faq-question.open {
+  color: #0d6efd;
+}
+
+.faq-arrow {
+  font-size: 0.75rem;
+  color: #aaa;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.faq-question.open .faq-arrow {
+  color: #0d6efd;
+}
+
+.faq-answer {
+  padding: 0 1.2rem 1rem;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+  border-top: 1px solid #f0f2f7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-faq-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-faq-section {
+    padding: 5rem 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-faq-section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-section {
+    padding: 5rem 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .budget-section {
+    padding: 5rem 3rem;
+  }
+
+  .budget-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .budget-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .budget-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .budget-image {
+    min-height: 220px;
+  }
+}
